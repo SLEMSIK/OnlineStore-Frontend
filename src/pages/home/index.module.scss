@@ -1,0 +1,26 @@
+.homePage {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  gap: 25px;
+
+  .upperBlock {
+    height: clamp(450px, 25vw, 800px);
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+
+    .goods {
+      gap: 20px;
+    }
+  }
+
+  .products {
+    width: 100%;
+    gap: 1px;
+    grid-template-columns: 1fr 3fr;
+
+    .productsList {
+      gap: 1px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

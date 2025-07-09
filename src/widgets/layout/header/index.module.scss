@@ -1,0 +1,42 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: calc(100% - var(--scrollbar-width));
+  height: clamp(40px, 5vw, 50px);
+  padding: clamp(10px, 2vw, 20px);
+  font-family: 'Open Sans', sans-serif;
+  justify-content: space-between;
+  z-index: 999;
+  background-color: var(--el-color);
+  display: flex;
+  user-select: none;
+
+  a,
+  button {
+    position: relative;
+
+    svg,
+    svg path {
+      color: var(--default);
+    }
+  }
+
+  .logo {
+    span {
+      margin-left: 10px;
+      padding-left: 15px;
+      border-left: 2px solid var(--default);
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 600;
+    }
+  }
+
+  .location {
+    gap: 10px;
+
+    button {
+      gap: 5px;
+    }
+  }
+}

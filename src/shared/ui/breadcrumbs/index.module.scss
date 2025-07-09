@@ -1,0 +1,28 @@
+.breadcrumbs {
+  position: relative;
+  margin: 20px 0px;
+  width: 100%;
+  gap: 5px;
+  color: var(--light-gray-color);
+  font-family: 'Open Sans', sans-serif;
+
+  a {
+    color: var(--light-gray-color);
+  }
+
+  .btn {
+    gap: 5px;
+
+    svg,
+    svg path {
+      stroke: var(--light-gray-color);
+    }
+
+    button {
+      &.active {
+        color: var(--purple-color) !important;
+        font-weight: 600;
+      }
+    }
+  }
+}

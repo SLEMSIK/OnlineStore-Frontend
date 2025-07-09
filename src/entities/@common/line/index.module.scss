@@ -1,0 +1,31 @@
+.line {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: var(--el-color);
+  border-radius: 10px;
+  display: grid;
+  gap: 0;
+  grid-auto-columns: 1fr;
+
+  .item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    box-sizing: border-box;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &.green {
+      color: #2db224;
+    }
+  }
+}
