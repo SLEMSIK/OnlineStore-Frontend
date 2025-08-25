@@ -4,12 +4,14 @@ import s from './index.module.scss'
 import { useSwipeable } from 'react-swipeable'
 import { Button } from '@/shared/ui/button'
 import { ArrowRight } from '@/shared/icons/ArrowRight'
+import { useNavigate } from 'react-router-dom'
 
 interface ProductCarouselProps {
   products: IProduct[]
 }
 
 export const ProductCarousel = ({ products }: ProductCarouselProps) => {
+  const navigate = useNavigate()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isSwiping, setIsSwiping] = useState(false)
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null)
@@ -55,7 +57,7 @@ export const ProductCarousel = ({ products }: ProductCarouselProps) => {
       <div className={s.leftBlock}>
         <h2 className={s.title}>{currentProduct?.title}</h2>
         <p className={s.subtitle}>{currentProduct?.title}. Мода и стиль</p>
-        <Button>
+        <Button onClick={() => navigate(`/product/${currentProduct?._id}`)}>
           купить сейчас <ArrowRight />
         </Button>
       </div>
