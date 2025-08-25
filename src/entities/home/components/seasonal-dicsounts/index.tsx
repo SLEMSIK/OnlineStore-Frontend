@@ -2,14 +2,16 @@ import type { IProduct } from '@/shared/interfaces/IProduct'
 import s from './index.module.scss'
 import { Button } from '@/shared/ui/button'
 import { ArrowRight } from '@/shared/icons/ArrowRight'
+import { useNavigate } from 'react-router-dom'
 
 export const SeasonalDiscounts = ({ ...props }: IProduct) => {
+  const navigate = useNavigate()
   return (
     <div className={`${s.seasonalDiscount} df aic`}>
       <div className={`${s.leftBlock} df fdc aic`}>
         <p>Сезонные скидки</p>
         <h2>{props.title}</h2>
-        <Button>
+        <Button onClick={() => navigate(`/product/${props?._id}`)}>
           смотреть <ArrowRight />
         </Button>
       </div>
